@@ -1,91 +1,182 @@
-Eco-KITAR: Malaysia's Smart Recycling Ecosystem
+# 🌱 Eco-KITAR: Malaysia’s Smart Recycling Ecosystem
 
-Eco-KITAR is a revolutionary twin-app platform designed to digitize waste management in Malaysia, connecting households, collectors, and government agencies to drive verifiable carbon reduction and establish a profitable circular economy.
+**Motto:** *Smartest Recycling Ecosystem in the World*
 
-Our motto: Smartest Recycling Ecosystem in the world.
+Eco-KITAR is a **twin-app intelligent recycling platform** designed to digitize waste management in Malaysia by connecting:
 
-🚀 Key Platform Components
+- 🏠 Households  
+- 🚚 Collectors & Logistics Teams  
+- 🏛️ Government & Authorities  
 
-Eco-KITAR is built on a dual-app structure tailored to specific user roles:
+The ecosystem ensures **verifiable carbon reduction**, efficient operations, and the creation of a **profitable circular economy** using AI, automation, and real-time data.
 
-Component
+---
 
-Target User
+## 🚀 Platform Overview
 
-Primary Functionality
+Eco-KITAR operates as a **dual-app ecosystem** supported by a centralized government monitoring dashboard.
 
-Eco-Rakyat App
+### 📱 Application Architecture
 
-Households / Users
+| Component | Target User | Core Functions |
+|-----------|-------------|----------------|
+| **Eco-Rakyat App** | Households | Snap & list items, AI Recycling Coach, instant rewards, fraud reporting |
+| **Eco-Rider App / Dashboard** | Collectors & Logistics | AI route planning, collection tracking, payouts & performance analytics |
+| **Jabatan Dashboard** | Government & Authorities | Live KPI monitoring, waste analytics, ESG tracking, CO₂ reporting |
 
-Snap-and-list items, AI Recycling Coach, instant rewards, and fraud reporting.
+---
 
-Eco-Rider App / Dashboard
+## 🛠️ Technology Stack
 
-Collectors / Logistics
+Eco-KITAR uses a **modern, scalable architecture** built for real-time operations and AI-driven workflows.
 
-AI Route Planner, dedicated dashboard for tracking collections, payouts, and efficiency metrics.
+### 1. Frontend
+- **Next.js / React**
+  - Web dashboards for Eco-Rakyat, Eco-Rider, and Jabatan  
+  - Fast rendering and responsive layout
 
-Jabatan Dashboard
+### 2. Backend
+- **Node.js + Express**
+  - REST APIs  
+  - AI request handling  
+  - Secure image uploads  
+  - System logic and validation
 
-Government / Admin
+### 3. Database
+- **PostgreSQL + Drizzle ORM**
+  - User records  
+  - Waste collection logs  
+  - Reward systems  
+  - AI inference tracking  
+  - Route analytics
 
-Real-time tracking of waste collected, trends, and verifiable ESG metrics (CO₂ saved).
+### 4. Hosting & Development
+- **Replit**
+  - Integrated frontend & backend  
+  - Fast prototyping  
+  - Centralized deployment
 
-🛠️ Technologies & Frameworks
+---
 
-Our solution uses a modern, scalable stack to handle high volumes of data, real-time logistics, and complex AI inferences.
+## 🧠 Artificial Intelligence Architecture
 
-1. Frontend
+Eco-KITAR integrates **two specialized AI engines** for best performance and accuracy.
 
-Next.js / React: Used for building the web interfaces for the EcoRakyat, Eco-Rider, and Jabatan dashboards, ensuring a fast, modern, and responsive user experience.
+---
 
-2. Backend
+### A. HuggingFace API — Image Recognition
 
-Node.js + Express: Serves as the robust API layer, handling all critical functions including: API endpoints, processing AI requests, managing database communication, and secure image uploads.
+**Purpose:** Rapid classification of recyclable items through camera input
 
-3. Database
+**Functions:**
+- Detects objects (bottle, paper, metal, etc.)
+- Maps to recyclable categories:
+  - Plastic
+  - Glass
+  - Paper
+  - Metal
 
-PostgreSQL (with Drizzle ORM): Chosen for its reliability and scalability. Stores all core platform data: recyclable item records, dynamic rider routes, user rewards, AI classification results, and system logs.
+**Used In:**
+- Eco-Rakyat “Snap a Photo” feature
 
-4. Storage / Hosting
+---
 
-Replit: Utilized for rapid development, testing, and deployment, integrating the frontend, backend, and database within a unified environment.
+### B. Google Gemini API 2.5 Flash — Reasoning & Interaction
 
-🧠 Artificial Intelligence Services
+**Purpose:** Advanced decision-making, conversation, and logistics optimization
 
-Eco-KITAR’s intelligence is powered by two distinct services, ensuring specialized and powerful functionality:
+#### Key Assistants
 
-A. HuggingFace API (Image Recognition)
+✅ **AI Recycling Coach**
+- Teaches correct disposal methods  
+- Reduces contamination  
+- Promotes sustainable habits  
 
-Purpose: Rapid, initial classification of user-uploaded images (e.g., bottle, can, paper).
+✅ **AI Rider Assistant**
+- Field support for collectors  
+- Material guidance  
+- Issue handling and reporting  
 
-Function: Classifies items and maps labels to standard recyclable categories (plastic, paper, glass, metal).
+✅ **AI Route Planner**
+- Route optimization  
+- Fuel reduction  
+- CO₂ prediction and reporting  
 
-Used In: The initial "snap a pic" feature in the Eco-Rakyat app.
+---
 
-B. Google Gemini API 2.5 Flash (Advanced Reasoning, Text & Maps)
+## ✨ What Makes Eco-KITAR’s AI Unique
 
-Purpose: Powers all advanced conversational AI and predictive logistics.
+Eco-KITAR is **purpose-built for waste ecosystems** — not generic automation.
 
-Key Assistants:
+### 🔍 Recycling-Specific AI
+Trained for:
+- Material identification  
+- Contamination prevention  
+- Lifecycle tracking  
+- Carbon accountability  
 
-AI Recycling Coach: Explains item recyclability and teaches proper disposal behavior to users (Eco-Rakyat).
+### 🌏 Bilingual Intelligence
+Supported languages:
+- English  
+- Bahasa Malaysia  
 
-AI Rider Assistant: Helps Eco-Riders with fieldwork questions, route issues, and item clarifications.
+### 📸 Multi-Turn Image Analysis
+AI:
+- Examines uploaded images  
+- Asks verification questions  
+- Improves classification accuracy
 
-AI Route Planner: Analyzes real-time data and provides suggestions for faster or more efficient collection paths.
+### 🚛 Category-Aware Routing
+Routes consider:
+- Hazardous waste  
+- Organic waste  
+- Material separation  
+- Emission savings
 
-✨ What Makes Eco-KITAR's AI Unique
+### 🎯 Role-Based Intelligence
 
-Our AI is specifically engineered for the waste management context, making it superior to general-purpose solutions:
+| Role | AI Persona |
+|------|------------|
+| Eco-Rakyat | Friendly Recycling Coach |
+| Eco-Rider | Field Operations Assistant |
+| Jabatan | Decision Support System |
 
-Recycling-Specific, Not Transport: The AI is trained and prompted specifically for the waste management context, focusing on material compatibility and CO₂ reduction, not just basic transport logistics.
+---
 
-Bilingual Conversational AI: Provides full, culturally relevant support in both English and Malay (Bahasa Malaysia), ensuring accessibility for all Malaysian users.
+## 🌍 Impact & Benefits
 
-Multi-Turn Image Analysis: The Gemini API moves beyond simple classification. It can analyze images and ask follow-up questions to ensure data quality (e.g., prompting the user to confirm a specific recycling number).
+Eco-KITAR drives **national-level outcomes**.
 
-Category-Aware Route Optimization: The AI considers material types when planning routes to prevent cross-contamination (e.g., keeping batteries separate from organic waste) while calculating verifiable fuel savings and CO₂ reduction metrics.
+### ♻️ Environmental Impact
+- Reduced landfill dependency  
+- Measured carbon savings  
+- Cleaner cities
 
-Role-Based AI Assistants: Each user persona gets a specialized AI: the Eco-Rakyat gets a friendly "Recycling Coach," while the Eco-Rider gets a practical "Rider Assistant" tailored for fieldwork challenges.
+### 💰 Economic Impact
+- Circular economy enablement  
+- Revenue from recyclables  
+- Job creation
+
+### 🏛️ Government Advantages
+- ESG metrics  
+- National waste visibility  
+- Policy intelligence  
+- Carbon tracking
+
+---
+
+## 🔮 Vision
+
+Eco-KITAR aims to become:
+
+> **The smartest recycling ecosystem in the world — starting in Malaysia.**
+
+---
+
+## 📄 License
+
+This project is proprietary and confidential.  
+For collaboration and licensing inquiries, please contact the project owner.
+
+---
+
