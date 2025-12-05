@@ -1,0 +1,93 @@
+Installation & Deployment
+
+Prerequisites:
+
+Node.js 18+ (recommended 20 LTS) and npm 9+
+macOS, Linux, or Windows
+Optional: PostgreSQL (Neon or any Postgres) if you want persistent data
+Optional: AI keys for image/text analysis (GOOGLE_API_KEY, HUGGINGFACE_API_KEY)
+Unpack:
+
+Unzip the project to a folder
+Open a terminal in the project root (the folder containing package.json)
+Install:
+
+npm install
+Configuration:
+
+Create a .env file in the project root with these variables:
+PORT=5000
+NODE_ENV=development (use production for production)
+SESSION_SECRET=change-this-in-production
+DATABASE_URL= (Postgres connection string; leave empty to use in-memory mode)
+GOOGLE_API_KEY= (optional; enables Gemini AI text/image features)
+HUGGINGFACE_API_KEY= (optional; enables image classification fallback)
+USE_MOCK_DATA=false (set true to force mock/in-memory mode)
+Database (optional but recommended for production):
+
+Set DATABASE_URL to a valid Postgres URL (e.g., Neon)
+Deploy schema:
+npm run db:push
+Notes:
+Sessions use Postgres when DATABASE_URL is set; otherwise an in-memory store is used
+If DATABASE_URL is not set, the app auto-seeds test users in memory
+Development run:
+
+npm run dev
+Open http://localhost:5000 (auto-retries to 5001/5002 if occupied)
+Active providers shown in server logs (Gemini/HuggingFace/local fallback)
+Production build & run:
+
+npm run build
+Set NODE_ENV=production and PORT in your environment
+npm run start
+Serve at http://localhost:<PORT>
+Testing Guide
+
+Accounts:
+
+Admin (Jabatan): admin / password123
+Collector (EcoRider): rider1 / rider123
+Citizen (EcoRakyat): rakyat1 / rakyat123
+Dashboard (Admin):
+
+Navigate to EcoKitar Dashboard after login
+Click Export Report in the header
+A PDF downloads with current KPI metrics from GET /api/dashboard/metrics
+Reports (Jabatan):
+
+Go to Reports & Analytics
+Use Export Report or predefined Download to generate PDF with logo and summary
+EcoRakyat AI Coach:
+
+Open EcoRakyat dashboard and use the AI assistant
+Query: Places to recycle near me
+Returns CSV-style list with Gateweld, Edge Plus Recycle, and Tzu Chi Gombak
+Query: I have 20 kg of newspapers should recycle at Gateweld Sdn Bhd, rm0.10/kg, or should I sell it here
+Asks one follow-up if needed, then shows time saved, travel cost saved, and reward comparison, recommending Eco‑rakyat when beneficial
+Image analysis:
+With GOOGLE_API_KEY set: enhanced identification and follow-ups
+Without GOOGLE_API_KEY but with HUGGINGFACE_API_KEY: fallback classification
+Environment Variables Reference
+
+PORT: Server port (default 5000).
+NODE_ENV: development or production. Controls dev middleware and session cookie security.
+SESSION_SECRET: Secret for session cookies; set a strong value in production.
+DATABASE_URL: Postgres connection string (enables persistent storage and session DB store).
+GOOGLE_API_KEY: Enables Gemini (“getRecyclingAdvice”, image prompts, route optimization summaries).
+HUGGINGFACE_API_KEY: Enables image classification fallback for recyclable detection.
+USE_MOCK_DATA: true forces in-memory data and mock mode.
+Common Commands
+
+Install dependencies:
+npm install
+Type-check:
+npm run check
+Development server:
+npm run dev
+Build:
+npm run build
+Production run:
+npm run start
+Deploy DB schema:
+npm run db:push
